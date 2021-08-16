@@ -1,4 +1,5 @@
-V1
+# V1
+
 - [x] Infinite loop
 - [x] Control buttons
 - [x] Pagination
