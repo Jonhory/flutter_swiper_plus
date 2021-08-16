@@ -1,3 +1,5 @@
+# 更新记录
+
 ## [1.1.1] - [2018/09/20]
     * 修复自动集成测试错误
 
@@ -13,7 +15,7 @@
     * `TINDER` 和 `STACK` 这两种布局方式实现垂直滚动, #9
 
 ## [1.0.5] - [2018/08/09]
-    * viewportFraction<1.0增加fade参数
+    * viewportFraction 1.0增加fade参数
 
 ## [1.0.4] - [2018/07/18]
     * 修复一些错别字，感谢[csharad](https://github.com/csharad)

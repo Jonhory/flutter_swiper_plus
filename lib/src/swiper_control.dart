@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
+import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 
 class SwiperControl extends SwiperPlugin {
   ///IconData for previous
