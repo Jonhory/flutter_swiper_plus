@@ -97,6 +97,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
 
   Widget buildSwiper() {
     return new Swiper(
+      // 点击弹出一个空白页面
       onTap: (int index) {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (BuildContext context) {
@@ -147,7 +148,10 @@ class _ExampleCustomState extends State<ExampleCustom> {
       new Container(
         color: Colors.black87,
         child: new SizedBox(
-            height: 300.0, width: double.infinity, child: buildSwiper()),
+            height: 300.0,
+            width: double.infinity,
+            child: buildSwiper()
+        ),
       ),
       new Expanded(
           child: new ListView(

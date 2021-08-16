@@ -577,7 +577,9 @@ class _SwiperState extends _SwiperTimerMixin {
   List<Widget> _ensureListForStack(
       Widget swiper, List<Widget>? listForStack, Widget widget) {
     if (listForStack == null) {
+      // fixme 实验
       listForStack = [swiper, widget];
+      // listForStack = [swiper];
     } else {
       listForStack.add(widget);
     }
@@ -612,14 +614,17 @@ class _SwiperState extends _SwiperTimerMixin {
             config);
       } else {
         listForStack = _ensureListForStack(
+          // fixme 轮播图的点就是在widget.pagination!.build(context, config)构造的
             swiper, listForStack, widget.pagination!.build(context, config));
       }
     }
 
     if (listForStack != null) {
       return new Stack(
+        clipBehavior: Clip.none,
         children: listForStack,
       );
+      return Container();
     }
 
     return swiper;
