@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-
 import 'src/ExampleCustom.dart';
-import 'src/ExampleSwiperInScrollView.dart';
 import 'src/config.dart';
+import 'src/ExampleSwiperInScrollView.dart';
+
+import 'package:flutter/cupertino.dart';
 
 void main() => runApp(new MyApp());
 
@@ -37,9 +37,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  final String? title;
+  final String title;
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return new Scaffold(
       appBar: new AppBar(
-        title: Text(widget.title ?? ''),
+        title: Text(widget.title),
       ),
       body: new ListView(
         children: render(context, [
@@ -115,14 +115,12 @@ class ExampleHorizontal extends StatelessWidget {
               fit: BoxFit.fill,
             );
           },
-          indicatorLayout: PageIndicatorLayout.SCALE,
+
+          indicatorLayout: PageIndicatorLayout.COLOR,
           autoplay: true,
-          autoplayDelay: 1000,
           itemCount: images.length,
           pagination: new SwiperPagination(),
           control: new SwiperControl(),
-          fade: 1.0,
-          viewportFraction: 0.85,
         ));
   }
 }
@@ -161,7 +159,6 @@ class ExampleFraction extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 child: new Swiper(
-              indicatorLayout: PageIndicatorLayout.SLIDE,
               itemBuilder: (BuildContext context, int index) {
                 return new Image.asset(
                   images[index],
@@ -292,7 +289,7 @@ class ExamplePhone extends StatelessWidget {
             ),
           ),
           new Swiper.children(
-            autoplay: true,
+            autoplay: false,
             pagination: new SwiperPagination(
                 margin: new EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
                 builder: new DotSwiperPaginationBuilder(
@@ -319,17 +316,21 @@ class ExamplePhone extends StatelessWidget {
 }
 
 class ScaffoldWidget extends StatelessWidget {
-  final Widget? child;
-  final String? title;
+  final Widget child;
+  final String title;
   final List<Widget>? actions;
 
-  ScaffoldWidget({this.child, this.title, this.actions});
+  ScaffoldWidget({
+    required this.child,
+    required this.title,
+    this.actions
+  });
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text(title ?? ''),
+        title: new Text(title),
         actions: actions,
       ),
       body: child,

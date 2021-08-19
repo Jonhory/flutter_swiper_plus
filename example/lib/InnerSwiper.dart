@@ -29,12 +29,8 @@ class _InnerSwiperState extends State<InnerSwiper> {
   @override
   void initState() {
     controller = new SwiperController();
-    autoplayes = new List.empty(growable: true)
-      ..length = 10
-      ..fillRange(0, 10, false);
-    controllers = new List.empty(growable: true)
-      ..length = 10
-      ..fillRange(0, 10, new SwiperController());
+    autoplayes = []..length = 10..fillRange(0, 10, false);
+    controllers = []..length = 10..fillRange(0, 10, new SwiperController());
     super.initState();
   }
 
@@ -64,7 +60,7 @@ class _InnerSwiperState extends State<InnerSwiper> {
                 ),
                 height: 300.0,
               ),
-              new ElevatedButton(
+              new RaisedButton(
                 onPressed: () {
                   setState(() {
                     autoplayes[index] = true;
@@ -72,7 +68,7 @@ class _InnerSwiperState extends State<InnerSwiper> {
                 },
                 child: new Text("Start autoplay"),
               ),
-              new ElevatedButton(
+              new RaisedButton(
                 onPressed: () {
                   setState(() {
                     autoplayes[index] = false;

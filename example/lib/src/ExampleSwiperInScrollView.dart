@@ -114,6 +114,7 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return new Container(
       color: Theme.of(context).primaryColorLight,
       child: CustomScrollView(
@@ -126,8 +127,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                 new SizedBox(
                   height: 100.0,
                   child: Swiper(
-                    scale: 0.8,
-                    fade: 0.8,
+                    scale:0.8,
+                    fade:0.8,
                     itemBuilder: (c, i) {
                       return Container(
                         color: Colors.grey,
@@ -141,8 +142,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                 new SizedBox(
                   height: 100.0,
                   child: Swiper(
-                      scale: 0.8,
-                      fade: 0.8,
+                      scale:0.8,
+                      fade:0.8,
                       itemBuilder: (c, i) {
                         return Container(
                           color: Colors.grey,
@@ -156,8 +157,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                 new SizedBox(
                   height: 100.0,
                   child: Swiper(
-                      scale: 0.8,
-                      fade: 0.8,
+                      scale:0.8,
+                      fade:0.8,
                       itemBuilder: (c, i) {
                         return Container(
                           color: Colors.grey,
@@ -172,8 +173,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                   height: 100.0,
                   child: Swiper(
                       outer: true,
-                      scale: 0.8,
-                      fade: 0.8,
+                      scale:0.8,
+                      fade:0.8,
                       itemBuilder: (c, i) {
                         return new Container(
                           color: Colors.grey,
@@ -198,8 +199,8 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                   height: 100.0,
                   child: new Swiper(
                       outer: true,
-                      scale: 0.8,
-                      fade: 0.8,
+                      scale:0.8,
+                      fade:0.8,
                       itemBuilder: (c, i) {
                         return new Card(
                           elevation: 2.0,
@@ -253,7 +254,7 @@ class _ExampleState extends State<ExampleSwiperInScrollView>
                   height: 100.0,
                   child: new Swiper(
                       outer: true,
-                      fade: 0.8,
+                      fade:0.8,
                       viewportFraction: 0.8,
                       scale: 0.8,
                       itemBuilder: (c, i) {

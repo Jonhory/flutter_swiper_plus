@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-
 import 'config.dart';
 import 'forms/form_widget.dart';
 
@@ -13,25 +12,25 @@ class ExampleCustom extends StatefulWidget {
 
 class _ExampleCustomState extends State<ExampleCustom> {
   //properties want to custom
-  int _itemCount = 0;
+  late int _itemCount;
 
-  bool _loop = false;
+  late bool _loop;
 
-  bool _autoplay = false;
+  late bool _autoplay;
 
-  int _autoplayDely = 0;
+  late int _autoplayDely;
 
-  double _padding = 0;
+  late double _padding;
 
-  bool _outer = false;
+  late bool _outer;
 
-  double _radius = 0;
+  late double _radius;
 
-  double _viewportFraction = 0;
+  late double _viewportFraction;
 
   late SwiperLayout _layout;
 
-  int _currentIndex = 0;
+  late int _currentIndex;
 
   late double _scale;
 
@@ -97,7 +96,6 @@ class _ExampleCustomState extends State<ExampleCustom> {
 
   Widget buildSwiper() {
     return new Swiper(
-      // 点击弹出一个空白页面
       onTap: (int index) {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (BuildContext context) {
@@ -148,10 +146,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
       new Container(
         color: Colors.black87,
         child: new SizedBox(
-            height: 300.0,
-            width: double.infinity,
-            child: buildSwiper()
-        ),
+            height: 300.0, width: double.infinity, child: buildSwiper()),
       ),
       new Expanded(
           child: new ListView(
@@ -188,20 +183,19 @@ class _ExampleCustomState extends State<ExampleCustom> {
           ),
           new FormWidget(
               label: "layout",
-              child: new FormSelect<SwiperLayout>(
-                placeholder: "Select layout",
-                value: _layout,
-                values: [
-                  SwiperLayout.DEFAULT,
-                  SwiperLayout.STACK,
-                  SwiperLayout.TINDER,
-                  SwiperLayout.CUSTOM
-                ],
-                valueChanged: (SwiperLayout value) {
-                  _layout = value;
-                  setState(() {});
-                },
-              )),
+              child: new FormSelect(
+                  placeholder: "Select layout",
+                  value: _layout,
+                  values: [
+                    SwiperLayout.DEFAULT,
+                    SwiperLayout.STACK,
+                    SwiperLayout.TINDER,
+                    SwiperLayout.CUSTOM
+                  ],
+                  valueChanged: (SwiperLayout value) {
+                    _layout = value;
+                    setState(() {});
+                  })),
           new FormWidget(
             label: "scrollDirection",
             child: new Switch(
@@ -320,7 +314,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
 
           new FormWidget(
               label: "curve",
-              child: new FormSelect<Curve>(
+              child: new FormSelect(
                   placeholder: "Select curve",
                   value: _layout,
                   values: [
