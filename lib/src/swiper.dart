@@ -154,7 +154,8 @@ class Swiper extends StatefulWidget {
                         layout == SwiperLayout.DEFAULT &&
                         (indicatorLayout == PageIndicatorLayout.SCALE ||
                             indicatorLayout == PageIndicatorLayout.COLOR ||
-                            indicatorLayout == PageIndicatorLayout.NONE)) ||
+                            indicatorLayout == PageIndicatorLayout.NONE ||
+                            indicatorLayout == PageIndicatorLayout.SLIDE)) ||
                     (loop && layout != SwiperLayout.DEFAULT)),
             "Only support `PageIndicatorLayout.SCALE` and `PageIndicatorLayout.COLOR`when layout==SwiperLayout.DEFAULT in loop mode"),
         super(key: key);
