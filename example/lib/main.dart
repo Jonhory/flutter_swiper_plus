@@ -216,10 +216,18 @@ class ExampleCustomPagination extends StatelessWidget {
                         (BuildContext context, SwiperPluginConfig config) {
                       return new ConstrainedBox(
                         child: new Container(
-                            color: Colors.white,
+                            decoration: BoxDecoration(
+                              //渐变 从下至上颜色渐变（封面下播放、点赞、时长那栏文字）
+                                gradient: LinearGradient(
+                                    begin: Alignment.bottomCenter,
+                                    end: Alignment.topCenter,
+                                    colors: [Colors.black54, Colors.transparent]
+                                ) // 从下面是黑到上面透明
+                            ),
+                            // color: Colors.white,
                             child: new Text(
                               "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
-                              style: new TextStyle(fontSize: 20.0),
+                              style: new TextStyle(fontSize: 20.0, color: Colors.white60),
                             )),
                         constraints: new BoxConstraints.expand(height: 50.0),
                       );
@@ -242,24 +250,34 @@ class ExampleCustomPagination extends StatelessWidget {
                     builder: new SwiperCustomPagination(builder:
                         (BuildContext context, SwiperPluginConfig config) {
                       return new ConstrainedBox(
-                        child: new Row(
-                          children: <Widget>[
-                            new Text(
-                              "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
-                              style: TextStyle(fontSize: 20.0),
-                            ),
-                            new Expanded(
-                              child: new Align(
-                                alignment: Alignment.centerRight,
-                                child: new DotSwiperPaginationBuilder(
-                                        color: Colors.black12,
-                                        activeColor: Colors.black,
-                                        size: 10.0,
-                                        activeSize: 20.0)
-                                    .build(context, config),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            //渐变 从下至上颜色渐变（封面下播放、点赞、时长那栏文字）
+                              gradient: LinearGradient(
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  colors: [Colors.black54, Colors.transparent]
+                              ) // 从下面是黑到上面透明
+                          ),
+                          child: new Row(
+                            children: <Widget>[
+                              new Text(
+                                "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
+                                style: TextStyle(fontSize: 20.0, color: Colors.white60),
                               ),
-                            )
-                          ],
+                              new Expanded(
+                                child: new Align(
+                                  alignment: Alignment.centerRight,
+                                  child: new DotSwiperPaginationBuilder(
+                                      color: Colors.black26,
+                                      activeColor: Colors.white70,
+                                      size: 8.0,
+                                      activeSize: 13.0)
+                                      .build(context, config),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         constraints: new BoxConstraints.expand(height: 50.0),
                       );
