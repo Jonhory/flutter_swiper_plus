@@ -12,7 +12,7 @@ dependencies:
   cupertino_icons: ^0.1.0
 
   flutter_swiper_plus:
-    path: ../
+    path: ../../flutter_swiper_plus
 #    git:
 #      url: 'https://github.com/mimajiushi/flutter_swiper_plus.git'
 #      ref: 'feature/flutter_swipter2.0'

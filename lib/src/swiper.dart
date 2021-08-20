@@ -7,6 +7,7 @@ import 'package:flutter_swiper_plus/src/transformer_page_view/index_controller.d
 import 'package:flutter_swiper_plus/src/transformer_page_view/transformer_page_view.dart';
 
 import 'flutter_page_indicator/flutter_page_indicator.dart';
+import 'transformer_page_view/buildin_transformers.dart';
 
 part 'custom_layout.dart';
 
@@ -927,40 +928,5 @@ class _StackViewState extends _CustomLayoutStateBase<_StackSwiper> {
         ),
       ),
     );
-  }
-}
-
-class ScaleAndFadeTransformer extends PageTransformer {
-  final double? _scale;
-  final double? _fade;
-
-  ScaleAndFadeTransformer({double? fade: 0.3, double? scale: 0.8})
-      : _fade = fade,
-        _scale = scale;
-
-  @override
-  Widget transform(Widget item, TransformInfo info) {
-    double position = info.position;
-    Widget child = item;
-    if (_scale != null) {
-      double scaleFactor = (1 - position.abs()) * (1 - _scale!);
-      double scale = _scale! + scaleFactor;
-
-      child = new Transform.scale(
-        scale: scale,
-        child: item,
-      );
-    }
-
-    if (_fade != null) {
-      double fadeFactor = (1 - position.abs()) * (1 - _fade!);
-      double opacity = _fade! + fadeFactor;
-      child = new Opacity(
-        opacity: opacity,
-        child: child,
-      );
-    }
-
-    return child;
   }
 }

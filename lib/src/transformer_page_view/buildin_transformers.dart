@@ -154,12 +154,12 @@ class DeepthPageTransformer extends PageTransformer {
 }
 
 class ScaleAndFadeTransformer extends PageTransformer {
-  final double _scale;
-  final double _fade;
+  late final double _scale;
+  late final double _fade;
 
-  ScaleAndFadeTransformer({double fade: 0.3, double scale: 0.8})
-      : _fade = fade,
-        _scale = scale;
+  ScaleAndFadeTransformer({double? fade: 0.3, double? scale: 0.8})
+      : _fade = fade!,
+        _scale = scale!;
 
   @override
   Widget transform(Widget item, TransformInfo info) {

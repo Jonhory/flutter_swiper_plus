@@ -29,8 +29,12 @@ class _InnerSwiperState extends State<InnerSwiper> {
   @override
   void initState() {
     controller = new SwiperController();
-    autoplayes = []..length = 10..fillRange(0, 10, false);
-    controllers = []..length = 10..fillRange(0, 10, new SwiperController());
+    autoplayes = []
+      ..length = 10
+      ..fillRange(0, 10, false);
+    controllers = []
+      ..length = 10
+      ..fillRange(0, 10, new SwiperController());
     super.initState();
   }
 

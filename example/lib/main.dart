@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'src/ExampleCustom.dart';
+import 'src/ExampleTransformers.dart';
 import 'src/config.dart';
 import 'src/ExampleSwiperInScrollView.dart';
 
@@ -20,17 +21,25 @@ class MyApp extends StatelessWidget {
       home: new MyHomePage(title: 'Flutter Swiper'),
       //home: buildHome(),
       routes: {
+        // old demo
         '/example01': (BuildContext context) => new ExampleHorizontal(),
         '/example02': (BuildContext context) => new ExampleVertical(),
         '/example03': (BuildContext context) => new ExampleFraction(),
         '/example04': (BuildContext context) => new ExampleCustomPagination(),
         '/example05': (BuildContext context) => new ExamplePhone(),
         '/example06': (BuildContext context) => new ScaffoldWidget(
-            child: new ExampleSwiperInScrollView(), title: "ScrollView"),
+            child: new ExampleSwiperInScrollView(), title: "ScrollView"
+        ),
         '/example07': (BuildContext context) => new ScaffoldWidget(
-              child: new ExampleCustom(),
-              title: "Custom All",
-            )
+            child: new ExampleCustom(),
+            title: "Custom All",
+        ),
+
+        // new demo
+        '/example08':(BuildContext context) => new ScaffoldWidget(
+            child: ExampleTransformers(),
+            title: "Transformers",
+        ),
       },
     );
   }
@@ -82,13 +91,17 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new ListView(
         children: render(context, [
+          // old demo
           ["Horizontal", "Scroll Horizontal", "/example01"],
           ["Vertical", "Scroll Vertical", "/example02"],
           ["Fraction", "Fraction style", "/example03"],
           ["Custom Pagination", "Custom Pagination", "/example04"],
           ["Phone", "Phone view", "/example05"],
           ["ScrollView ", "In a ScrollView", "/example06"],
-          ["Custom", "Custom all properties", "/example07"]
+          ["Custom", "Custom all properties", "/example07"],
+
+          // new demo
+          ["Transformers", "diff transformers", "/example08"]
         ]),
       ),
     );
@@ -115,7 +128,6 @@ class ExampleHorizontal extends StatelessWidget {
               fit: BoxFit.fill,
             );
           },
-
           indicatorLayout: PageIndicatorLayout.COLOR,
           autoplay: true,
           itemCount: images.length,
@@ -159,18 +171,15 @@ class ExampleFraction extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 child: new Swiper(
-                  itemBuilder: (BuildContext context, int index) {
-                    return new Image.asset(
-                      images[index],
-                      fit: BoxFit.fill
-                    );
-                  },
-                  autoplay: true,
-                  itemCount: images.length,
-                  pagination: new SwiperPagination(builder: SwiperPagination.fraction),
-                  control: new SwiperControl(),
-                )
-            ),
+              itemBuilder: (BuildContext context, int index) {
+                return new Image.asset(images[index], fit: BoxFit.fill);
+              },
+              autoplay: true,
+              itemCount: images.length,
+              pagination:
+                  new SwiperPagination(builder: SwiperPagination.fraction),
+              control: new SwiperControl(),
+            )),
             Expanded(
                 child: new Swiper(
               itemBuilder: (BuildContext context, int index) {
@@ -217,17 +226,20 @@ class ExampleCustomPagination extends StatelessWidget {
                       return new ConstrainedBox(
                         child: new Container(
                             decoration: BoxDecoration(
-                              //渐变 从下至上颜色渐变（封面下播放、点赞、时长那栏文字）
+                                //渐变 从下至上颜色渐变（封面下播放、点赞、时长那栏文字）
                                 gradient: LinearGradient(
                                     begin: Alignment.bottomCenter,
                                     end: Alignment.topCenter,
-                                    colors: [Colors.black54, Colors.transparent]
-                                ) // 从下面是黑到上面透明
-                            ),
+                                    colors: [
+                                  Colors.black54,
+                                  Colors.transparent
+                                ]) // 从下面是黑到上面透明
+                                ),
                             // color: Colors.white,
                             child: new Text(
                               "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
-                              style: new TextStyle(fontSize: 20.0, color: Colors.white60),
+                              style: new TextStyle(
+                                  fontSize: 20.0, color: Colors.white60),
                             )),
                         constraints: new BoxConstraints.expand(height: 50.0),
                       );
@@ -252,27 +264,30 @@ class ExampleCustomPagination extends StatelessWidget {
                       return new ConstrainedBox(
                         child: Container(
                           decoration: BoxDecoration(
-                            //渐变 从下至上颜色渐变（封面下播放、点赞、时长那栏文字）
+                              //渐变 从下至上颜色渐变（封面下播放、点赞、时长那栏文字）
                               gradient: LinearGradient(
                                   begin: Alignment.bottomCenter,
                                   end: Alignment.topCenter,
-                                  colors: [Colors.black54, Colors.transparent]
-                              ) // 从下面是黑到上面透明
-                          ),
+                                  colors: [
+                                Colors.black54,
+                                Colors.transparent
+                              ]) // 从下面是黑到上面透明
+                              ),
                           child: new Row(
                             children: <Widget>[
                               new Text(
                                 "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
-                                style: TextStyle(fontSize: 20.0, color: Colors.white60),
+                                style: TextStyle(
+                                    fontSize: 20.0, color: Colors.white60),
                               ),
                               new Expanded(
                                 child: new Align(
                                   alignment: Alignment.centerRight,
                                   child: new DotSwiperPaginationBuilder(
-                                      color: Colors.black26,
-                                      activeColor: Colors.white70,
-                                      size: 8.0,
-                                      activeSize: 13.0)
+                                          color: Colors.black26,
+                                          activeColor: Colors.white70,
+                                          size: 8.0,
+                                          activeSize: 13.0)
                                       .build(context, config),
                                 ),
                               )
@@ -338,11 +353,7 @@ class ScaffoldWidget extends StatelessWidget {
   final String title;
   final List<Widget>? actions;
 
-  ScaffoldWidget({
-    required this.child,
-    required this.title,
-    this.actions
-  });
+  ScaffoldWidget({required this.child, required this.title, this.actions});
 
   @override
   Widget build(BuildContext context) {
