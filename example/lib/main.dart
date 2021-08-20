@@ -159,18 +159,18 @@ class ExampleFraction extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 child: new Swiper(
-              itemBuilder: (BuildContext context, int index) {
-                return new Image.asset(
-                  images[index],
-                  fit: BoxFit.fill,
-                );
-              },
-              autoplay: true,
-              itemCount: images.length,
-              pagination:
-                  new SwiperPagination(builder: SwiperPagination.fraction),
-              control: new SwiperControl(),
-            )),
+                  itemBuilder: (BuildContext context, int index) {
+                    return new Image.asset(
+                      images[index],
+                      fit: BoxFit.fill
+                    );
+                  },
+                  autoplay: true,
+                  itemCount: images.length,
+                  pagination: new SwiperPagination(builder: SwiperPagination.fraction),
+                  control: new SwiperControl(),
+                )
+            ),
             Expanded(
                 child: new Swiper(
               itemBuilder: (BuildContext context, int index) {

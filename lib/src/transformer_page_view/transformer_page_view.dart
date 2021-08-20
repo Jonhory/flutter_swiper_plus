@@ -23,10 +23,10 @@ const int kDefaultTransactionDuration = 300;
 
 class TransformInfo {
   /// The `width` of the `TransformerPageView`
-  final double? width;
+  late final double width;
 
   /// The `height` of the `TransformerPageView`
-  final double? height;
+  late final double height;
 
   /// The `position` of the widget pass to [PageTransformer.transform]
   ///  A `position` describes how visible the widget is.
@@ -374,8 +374,8 @@ class _TransformerPageViewState extends State<TransformerPageView> {
 
           TransformInfo info = new TransformInfo(
               index: renderIndex,
-              width: _size?.width,
-              height: _size?.height,
+              width: _size!.width,
+              height: _size!.height,
               position: position.clamp(-1.0, 1.0),
               activeIndex:
                   _pageController.getRenderIndexFromRealIndex(_activeIndex),
