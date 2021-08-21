@@ -154,26 +154,37 @@ class DeepthPageTransformer extends PageTransformer {
 }
 
 class ScaleAndFadeTransformer extends PageTransformer {
-  late final double _scale;
-  late final double _fade;
+  final double? _scale;
+  final double? _fade;
 
   ScaleAndFadeTransformer({double? fade: 0.3, double? scale: 0.8})
-      : _fade = fade!,
-        _scale = scale!;
+      : _fade = fade,
+        _scale = scale;
 
   @override
   Widget transform(Widget item, TransformInfo info) {
     double position = info.position;
-    double scaleFactor = (1 - position.abs()) * (1 - _scale);
-    double fadeFactor = (1 - position.abs()) * (1 - _fade);
-    double opacity = _fade + fadeFactor;
-    double scale = _scale + scaleFactor;
-    return new Opacity(
-      opacity: opacity,
-      child: new Transform.scale(
+    Widget child = item;
+    if (_scale != null) {
+      double scaleFactor = (1 - position.abs()) * (1 - _scale!);
+      double scale = _scale! + scaleFactor;
+
+      child = new Transform.scale(
         scale: scale,
         child: item,
-      ),
-    );
+      );
+    }
+
+    if (_fade != null) {
+      double fadeFactor = (1 - position.abs()) * (1 - _fade!);
+      double opacity = _fade! + fadeFactor;
+      child = new Opacity(
+        opacity: opacity,
+        child: child,
+      );
+    }
+
+    return child;
   }
 }
+

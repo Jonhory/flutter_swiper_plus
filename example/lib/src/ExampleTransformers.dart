@@ -225,7 +225,7 @@ class _ExampleState extends State<ExampleTransformers>
                     new SizedBox(
                         height: 200.0,
                         child: new Swiper(
-                          transformer: ScaleAndFadeTransformer(fade: 0.3, scale: 0.1),
+                          transformer: new ScaleAndFadeTransformer(fade: 0.3, scale: 0.1),
                           itemCount: 3,
                           itemBuilder: (BuildContext context, int index) {
                             return imageList[index];
