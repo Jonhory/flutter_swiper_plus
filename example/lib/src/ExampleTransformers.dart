@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:flutter_swiper_plus/src/transformer_page_view/buildin_transformers.dart';
 
 import '../view_util.dart';
@@ -36,6 +35,7 @@ class _ExampleState extends State<ExampleTransformers>
     _animation12 = new Tween(begin: 0.0, end: 1.0).animate(controller);
     _animation13 = new Tween(begin: 0.0, end: 1.0).animate(controller);
     controller.animateTo(1.0, duration: new Duration(seconds: 3));
+
     super.initState();
   }
 
@@ -118,21 +118,6 @@ class _ExampleState extends State<ExampleTransformers>
   @override
   Widget build(BuildContext context) {
 
-    List<Widget> imageList = [
-      Image.network(
-        "https://www.wenjie.store/blog/img/%E9%99%88%EF%BC%88%E6%97%A0%E6%B0%B4%E5%8D%B0%EF%BC%89_1590654816239.jpg",
-        fit: BoxFit.fill,
-      ),
-      Image.network(
-        "https://www.wenjie.store/blog/img/75196331_p0_master1200_1582219984791.jpg",
-        fit: BoxFit.fill,
-      ),
-      Image.network(
-        "https://www.wenjie.store/blog/img/79579355_p0_master1200_1582253610670.jpg",
-        fit: BoxFit.fill,
-      )
-    ];
-
     return new Container(
       color: Theme.of(context).primaryColorLight,
       child: CustomScrollView(
@@ -145,94 +130,31 @@ class _ExampleState extends State<ExampleTransformers>
 
                     // Default (not set transformer)
                     textWrap(text: "Default (not set transformer)", height: 30.0),
-                    new SizedBox(
-                      height: 200.0,
-                      child: new Swiper(
-                        itemCount: 3,
-                        itemBuilder: (BuildContext context, int index) {
-                          return imageList[index];
-                        },
-                      )
-                    ),
+                    swiperWrap(),
 
                     // Default (not set transformer)
                     textWrap(text: "AccordionTransformer", height: 30.0),
-                    new SizedBox(
-                        height: 200.0,
-                        child: new Swiper(
-                          transformer: AccordionTransformer(),
-                          itemCount: 3,
-                          itemBuilder: (BuildContext context, int index) {
-                            return imageList[index];
-                          },
-                        )
-                    ),
+                    swiperWrap(transformer: AccordionTransformer()),
 
                     // ThreeDTransformer
                     textWrap(text: "ThreeDTransformer", height: 30.0),
-                    new SizedBox(
-                        height: 200.0,
-                        child: new Swiper(
-                          transformer: ThreeDTransformer(),
-                          itemCount: 3,
-                          itemBuilder: (BuildContext context, int index) {
-                            return imageList[index];
-                          },
-                        )
-                    ),
+                    swiperWrap(transformer: ThreeDTransformer()),
 
                     // ZoomInPageTransformer
                     textWrap(text: "ZoomInPageTransformer", height: 30.0),
-                    new SizedBox(
-                        height: 200.0,
-                        child: new Swiper(
-                          transformer: ZoomInPageTransformer(),
-                          itemCount: 3,
-                          itemBuilder: (BuildContext context, int index) {
-                            return imageList[index];
-                          },
-                        )
-                    ),
+                    swiperWrap(transformer: ZoomInPageTransformer()),
 
                     // ZoomOutPageTransformer
                     textWrap(text: "ZoomOutPageTransformer", height: 30.0),
-                    new SizedBox(
-                        height: 200.0,
-                        child: new Swiper(
-                          transformer: ZoomOutPageTransformer(),
-                          itemCount: 3,
-                          itemBuilder: (BuildContext context, int index) {
-                            return imageList[index];
-                          },
-                        )
-                    ),
+                    swiperWrap(transformer: ZoomOutPageTransformer()),
 
                     // DepthPageTransformer
-                    textWrap(text: "DepthPageTransformer", height: 30.0),
-                    new SizedBox(
-                        height: 200.0,
-                        child: new Swiper(
-                          transformer: DeepthPageTransformer(),
-                          itemCount: 3,
-                          itemBuilder: (BuildContext context, int index) {
-                            return imageList[index];
-                          },
-                        )
-                    ),
+                    textWrap(text: "transformer: DepthPageTransformer", height: 30.0),
+                    swiperWrap(transformer: DeepthPageTransformer()),
 
                     // ScaleAndFadeTransformer
-                    textWrap(text: "ScaleAndFadeTransformer", height: 30.0),
-                    new SizedBox(
-                        height: 200.0,
-                        child: new Swiper(
-                          transformer: new ScaleAndFadeTransformer(fade: 0.3, scale: 0.1),
-                          itemCount: 3,
-                          itemBuilder: (BuildContext context, int index) {
-                            return imageList[index];
-                          },
-                        )
-                    ),
-
+                    textWrap(text: "transformer: ScaleAndFadeTransformer", height: 30.0),
+                    swiperWrap(transformer: ScaleAndFadeTransformer(fade: 0.3, scale: 0.1)),
                   ],
                 );
               }, childCount: 1)
