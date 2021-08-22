@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://github.com/mimajiushi/flutter_swiper_plus">
-        <b>英文说明</b>
+        <b>English</b>
     </a>
 </p>
 
