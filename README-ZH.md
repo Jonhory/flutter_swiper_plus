@@ -56,7 +56,7 @@
 
 - 可以自己覆写`PageTransformer`来自定义动画，参考[`buildin_transformers.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/lib/src/transformer_page_view/buildin_transformers.dart)
 - 目前已有的动画如下所示👇：  
-  ![img_v2_d0e02e30d07f4e8bbb67d1d23e5eb59g.gif](https://www.wenjie.store/blog/img/img_v2_d0e02e30-d07f-4e8b-bb67-d1d23e5eb59g_1629633400791.gif)
+  ![img_v2_820b626c48d2480eb46283b245300a4g.gif](https://www.wenjie.store/blog/img/img_v2_820b626c-48d2-480e-b462-83b245300a4g_1629638021144.gif)
   
 > 你可以运行代码中的example中的 [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart) 查看实际效果
 

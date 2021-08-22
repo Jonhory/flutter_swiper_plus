@@ -51,7 +51,7 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 
 - This part is currently controlled by enum, It can be previewed in the `Custom All` of the example project
 - The following is a demonstration 👇：  
-  ![img_v2_9f287008fd3a49d99acc75dc33cb9e5g.gif](https://www.wenjie.store/blog/img/img_v2_9f287008-fd3a-49d9-9acc-75dc33cb9e5g_1629633880145.gif)
+  ![img_v2_820b626c48d2480eb46283b245300a4g.gif](https://www.wenjie.store/blog/img/img_v2_820b626c-48d2-480e-b462-83b245300a4g_1629638021144.gif)
 
 > you can run [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart)in example to see the actual effect.
 
