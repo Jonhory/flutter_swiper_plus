@@ -13,12 +13,12 @@
 
 ---
 
-# :sparkles::sparkles: New Features: 分页组件
+# :sparkles: New Features: 分页组件
 
 正在使用这个项目作为分页： [flutter_page_indicator](https://github.com/best-flutter/flutter_page_indicator)  .
 > 该组件的代码已经被直接放到`flutter_swiper_plus`
 
-# :sparkles::sparkles: New Features: 视差
+# :sparkles: New Features: 视差
 
 我们在 Swiper 中也像android一样支持了 `PageTransformer`, 只要给Swiper设置一下 `transformer` 属性就行,
 这里返回一个被转换的组件给Swiper. 目前仅仅支持 `DEFAULT`布局.
