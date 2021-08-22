@@ -1,5 +1,10 @@
 # update log
 
+## [2.0.2] - [2021/08-22]
+
+- add new example （Built in some animation）
+- add md
+
 ## [2.0.1] - [2021/08-19]
 
 - fix example's bug
