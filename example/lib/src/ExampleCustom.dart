@@ -192,7 +192,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
                     SwiperLayout.TINDER,
                     SwiperLayout.CUSTOM
                   ],
-                  valueChanged: (SwiperLayout value) {
+                  valueChanged: (dynamic value) {
                     _layout = value;
                     setState(() {});
                   })),
@@ -325,7 +325,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
                     Curves.bounceIn,
                     Curves.fastOutSlowIn
                   ],
-                  valueChanged: (Curve value) {
+                  valueChanged: (dynamic value) {
                     _curve = value;
                     setState(() {});
                   })),

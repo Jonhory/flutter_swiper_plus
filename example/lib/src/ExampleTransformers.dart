@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:flutter_swiper_plus/src/transformer_page_view/buildin_transformers.dart';
 
 import '../view_util.dart';
@@ -128,24 +129,25 @@ class _ExampleState extends State<ExampleTransformers>
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
 
+                    /// transformer
                     // Default (not set transformer)
-                    textWrap(text: "Default (not set transformer)", height: 30.0),
+                    textWrap(text: "transformer: Default (not set transformer)", height: 30.0),
                     swiperWrap(),
 
                     // Default (not set transformer)
-                    textWrap(text: "AccordionTransformer", height: 30.0),
+                    textWrap(text: "transformer: AccordionTransformer", height: 30.0),
                     swiperWrap(transformer: AccordionTransformer()),
 
                     // ThreeDTransformer
-                    textWrap(text: "ThreeDTransformer", height: 30.0),
+                    textWrap(text: "transformer: ThreeDTransformer", height: 30.0),
                     swiperWrap(transformer: ThreeDTransformer()),
 
                     // ZoomInPageTransformer
-                    textWrap(text: "ZoomInPageTransformer", height: 30.0),
+                    textWrap(text: "transformer: ZoomInPageTransformer", height: 30.0),
                     swiperWrap(transformer: ZoomInPageTransformer()),
 
                     // ZoomOutPageTransformer
-                    textWrap(text: "ZoomOutPageTransformer", height: 30.0),
+                    textWrap(text: "transformer: ZoomOutPageTransformer", height: 30.0),
                     swiperWrap(transformer: ZoomOutPageTransformer()),
 
                     // DepthPageTransformer

@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         // new demo
         '/example08':(BuildContext context) => new ScaffoldWidget(
             child: ExampleTransformers(),
-            title: "Transformers",
+            title: "Transformers & layout",
         ),
       },
     );

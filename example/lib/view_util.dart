@@ -32,6 +32,7 @@ Widget textWrap({text: "Default", height: 1.0, textAlign: TextAlign.center}) {
 Widget swiperWrap ({
   transformer,
   layout,
+  customLayoutOption,
   itemWidth: 300.0,
   itemHeight: 200.0
 }){
