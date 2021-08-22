@@ -41,7 +41,7 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 
 - You can override 'PageTransformer' to customize the animation ，see[`buildin_transformers.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/lib/src/transformer_page_view/buildin_transformers.dart)
 - The existing animation is shown below 👇：  
-  ![img_v2_d0e02e30d07f4e8bbb67d1d23e5eb59g.gif](https://www.wenjie.store/blog/img/img_v2_d0e02e30-d07f-4e8b-bb67-d1d23e5eb59g_1629633400791.gif)
+  ![img_v2_820b626c48d2480eb46283b245300a4g.gif](https://www.wenjie.store/blog/img/img_v2_820b626c-48d2-480e-b462-83b245300a4g_1629638021144.gif)
   
 > you can run [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart)in example to see the actual effect.
 
@@ -51,7 +51,7 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 
 - This part is currently controlled by enum, It can be previewed in the `Custom All` of the example project
 - The following is a demonstration 👇：  
-  ![img_v2_820b626c48d2480eb46283b245300a4g.gif](https://www.wenjie.store/blog/img/img_v2_820b626c-48d2-480e-b462-83b245300a4g_1629638021144.gif)
+  ![img_v2_9f287008fd3a49d99acc75dc33cb9e5g.gif](https://www.wenjie.store/blog/img/img_v2_9f287008-fd3a-49d9-9acc-75dc33cb9e5g_1629633880145.gif)
 
 > you can run [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart)in example to see the actual effect.
 
