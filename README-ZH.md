@@ -31,23 +31,23 @@
 
 # 例子截图
 
-- 横向
+- 横向  
 ![1.gif](https://www.wenjie.store/blog/img/1_1629632427147.gif)
 
-- 纵向
+- 纵向  
 ![2.gif](https://www.wenjie.store/blog/img/2_1629632490738.gif)
   
-- 横纵各一半
+- 横纵各一半  
 ![3.gif](https://www.wenjie.store/blog/img/3_1629632558912.gif)
   
-- 类似B站配文字的
-  - 自己配的👇：
+- 类似B站配文字的  
+  - 自己配的👇：  
   - ![Custom Pagination](https://www.wenjie.store/blog/img/img_v2_e7750681-4025-48ef-afaa-722df375eb7g_1629632061931.gif)
-  - B站原版👇：
+  - B站原版👇：  
   - ![img_v2_ac16d5f2ce8847139743b2776f6bf57g.gif](https://www.wenjie.store/blog/img/img_v2_ac16d5f2-ce88-4713-9743-b2776f6bf57g_1629632364380.gif)
 
-- 模仿手机页面
-![5.gif](https://www.wenjie.store/blog/img/5_1629632798160.gif)
+- 模仿手机页面  
+![5.gif](https://www.wenjie.store/blog/img/5_1629632798160.gif)  
 ![tmp.gif](https://www.wenjie.store/blog/img/tmp_1629632992474.gif)
   
 ---
@@ -55,7 +55,7 @@
 # 不同的过度动画
 
 - 可以自己覆写`PageTransformer`来自定义动画，参考[`buildin_transformers.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/lib/src/transformer_page_view/buildin_transformers.dart)
-- 目前已有的动画如下所示👇：
+- 目前已有的动画如下所示👇：  
   ![img_v2_d0e02e30d07f4e8bbb67d1d23e5eb59g.gif](https://www.wenjie.store/blog/img/img_v2_d0e02e30-d07f-4e8b-bb67-d1d23e5eb59g_1629633400791.gif)
   
 > 你可以运行代码中的example中的 [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart) 查看实际效果
@@ -65,7 +65,7 @@
 # 内建布局
 
 - 这部分目前是通过枚举控制的，可在example项目的`Custom All`中预览
-- 以下是示范👇：
+- 以下是示范👇：  
   ![img_v2_9f287008fd3a49d99acc75dc33cb9e5g.gif](https://www.wenjie.store/blog/img/img_v2_9f287008-fd3a-49d9-9acc-75dc33cb9e5g_1629633880145.gif)
 
 > 同样的，你可以运行代码中的example中的 [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart) 查看实际效果
