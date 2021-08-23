@@ -8,23 +8,23 @@
 
 # flutter_swiper_plus
 
-继承自[flutter_swiper](https://github.com/best-flutter/flutter_swiper)组件 + 适配Flutter空安全, 多种布局方式，无限轮播，Android和IOS双端适配.
+继承自[flutter_swiper](https://github.com/best-flutter/flutter_swiper)组件 + 适配Flutter空安全, 多种布局方式，无限轮播，Android和IOS双端适配。
 > 如需空安全之前的版本（Flutter 2.0之前），请使用：[flutter_swiper](https://github.com/best-flutter/flutter_swiper)
 
 ---
 
 # :sparkles: New Features: 分页组件
 
-正在使用这个项目作为分页： [flutter_page_indicator](https://github.com/best-flutter/flutter_page_indicator)  .
+正在使用这个项目作为分页： [flutter_page_indicator](https://github.com/best-flutter/flutter_page_indicator)
 > 该组件的代码已经被直接放到`flutter_swiper_plus`
 
 # :sparkles: New Features: 视差
 
-我们在 Swiper 中也像android一样支持了 `PageTransformer`, 只要给Swiper设置一下 `transformer` 属性就行,
-这里返回一个被转换的组件给Swiper. 目前仅仅支持 `DEFAULT`布局.
-感谢 @FlutterRocks ,棒棒哒 👏.
+我们在 Swiper 中也像android一样支持了 `PageTransformer`，只要给Swiper设置一下 `transformer` 属性就行，
+这里返回一个被转换的组件给Swiper. 目前仅仅支持 `DEFAULT`布局。
+感谢 @FlutterRocks ，棒棒哒 👏。
 
-正在使用这个项目作为视差 [transformer_page_view](https://github.com/best-flutter/transformer_page_view)  .
+正在使用这个项目作为视差 [transformer_page_view](https://github.com/best-flutter/transformer_page_view)
 > 该组件的代码已经被直接放到`flutter_swiper_plus`
 
 ---
@@ -228,14 +228,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ### 分页指示器
 
-分页指示器继承自 `SwiperPlugin`,`SwiperPlugin` 为 `Swiper` 提供额外的界面.设置为`new SwiperPagination()` 展示默认分页.
+分页指示器继承自 `SwiperPlugin`,`SwiperPlugin` 为 `Swiper` 提供额外的界面.设置为`new SwiperPagination()` 展示默认分页。
 
 
 | 参数            | 默认值             |           描述     |
 | :------------ |:---------------:| :-----|
 | alignment | Alignment.bottomCenter  | 如果要将分页指示器放到其他位置，那么可以修改这个参数 |
 | margin | const EdgeInsets.all(10.0) | 分页指示器与容器边框的距离 |
-| builder | SwiperPagination.dots | 目前已经定义了两个默认的分页指示器样式： `SwiperPagination.dots` 、 `SwiperPagination.fraction`，都可以做进一步的自定义. |
+| builder | SwiperPagination.dots | 目前已经定义了两个默认的分页指示器样式： `SwiperPagination.dots` 、 `SwiperPagination.fraction`，都可以做进一步的自定义 |
 
 如果需要定制自己的分页指示器，那么可以这样写：
 
@@ -255,7 +255,7 @@ new Swiper(
 
 ### 控制按钮
 
-控制按钮组件也是继承自 `SwiperPlugin`,设置 `new SwiperControl()` 展示默认控制按钮.
+控制按钮组件也是继承自 `SwiperPlugin`，设置 `new SwiperControl()` 展示默认控制按钮。
 
 
 | 参数            | 默认值             |           描述     |
@@ -270,7 +270,7 @@ new Swiper(
 
 ### 控制器
 
-`SwiperController` 用于控制 Swiper的`index`属性, 停止和开始自动播放. 通过 `new SwiperController()` 创建一个SwiperController实例，并保存，以便将来能使用。  
+`SwiperController` 用于控制 Swiper的`index`属性，停止和开始自动播放. 通过 `new SwiperController()` 创建一个SwiperController实例，并保存，以便将来能使用。  
 
 | 方法            | 描述     |
 | :------------ |:-----|
@@ -287,7 +287,7 @@ new Swiper(
 | 参数            | 默认值             |           描述     |
 | :------------ |:---------------:| :-----|
 | autoplayDely | 3000  | 自动播放延迟毫秒数. |
-| autoplayDisableOnInteraction | true | 当用户拖拽的时候，是否停止自动播放. |
+| autoplayDisableOnInteraction | true | 当用户拖拽的时候，是否停止自动播放.|
 
 ---
 

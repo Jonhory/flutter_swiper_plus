@@ -39,8 +39,8 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 
 # Different Transformers
 
-- You can override 'PageTransformer' to customize the animation ，see[`buildin_transformers.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/lib/src/transformer_page_view/buildin_transformers.dart)
-- The existing animation is shown below 👇：  
+- You can override 'PageTransformer' to customize the animation, see[`buildin_transformers.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/lib/src/transformer_page_view/buildin_transformers.dart)
+- The existing animation is shown below 👇:  
   ![img_v2_820b626c48d2480eb46283b245300a4g.gif](https://www.wenjie.store/blog/img/img_v2_820b626c-48d2-480e-b462-83b245300a4g_1629638021144.gif)
   
 > you can run [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart)in example to see the actual effect.
@@ -50,12 +50,12 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 # Different layouts
 
 - This part is currently controlled by enum, It can be previewed in the `Custom All` of the example project
-- The following is a demonstration 👇：  
+- The following is a demonstration 👇:  
   ![img_v2_9f287008fd3a49d99acc75dc33cb9e5g.gif](https://www.wenjie.store/blog/img/img_v2_9f287008-fd3a-49d9-9acc-75dc33cb9e5g_1629633880145.gif)
 
 > you can run [`main.dart`](https://github.com/mimajiushi/flutter_swiper_plus/blob/master/example/lib/main.dart)in example to see the actual effect.
 
-- Very easy to create you own custom animation, like this👇:
+- Very easy to create you own custom animation, like this👇:  
 ```
 
  new Swiper(
@@ -86,7 +86,7 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 
 ```
 
-- The `CustomLayoutOption` is designed to describe animations. It is very easy to specify every state of items in Swiper, like this👇：
+- The `CustomLayoutOption` is designed to describe animations. It is very easy to specify every state of items in Swiper, like this👇:  
 
 ```
 new CustomLayoutOption(
@@ -125,14 +125,14 @@ new CustomLayoutOption(
 
 ## installation
 
-in `pubspec.yaml`, write this👇：
+in `pubspec.yaml`, write this👇:
 
 ```yaml
 dependencies:
-  flutter_swiper_plus : 2.0.4
+  flutter_swiper_plus : 2.0.4  
 ```
 
-then run this👇 in your project root：
+then run this👇 in your project root:  
 
 ```bash
 flutter packages get 
