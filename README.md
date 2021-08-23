@@ -16,22 +16,22 @@ The best swiper for flutter , with multiple layouts, infinite loop. Compatible w
 
 # Show Case
 
-- Horizontal  
+## Horizontal  
 ![1.gif](https://www.wenjie.store/blog/img/1_1629632427147.gif)
 
-- Vertical  
+## Vertical  
 ![2.gif](https://www.wenjie.store/blog/img/2_1629632490738.gif)
   
-- Horizontal & Vertical in part  
+## Horizontal & Vertical in part  
 ![3.gif](https://www.wenjie.store/blog/img/3_1629632558912.gif)
   
-- Imitating BiliBili's (with text)  
+## Imitating BiliBili's (with text)  
   - flutter_swiper_plus👇：  
   - ![Custom Pagination](https://www.wenjie.store/blog/img/img_v2_e7750681-4025-48ef-afaa-722df375eb7g_1629632061931.gif)
   - BiliBili's👇：  
   - ![img_v2_ac16d5f2ce8847139743b2776f6bf57g.gif](https://www.wenjie.store/blog/img/img_v2_ac16d5f2-ce88-4713-9743-b2776f6bf57g_1629632364380.gif)
 
-- Imitate mobile page  
+## Imitate mobile page  
 ![5.gif](https://www.wenjie.store/blog/img/5_1629632798160.gif)  
 ![tmp.gif](https://www.wenjie.store/blog/img/tmp_1629632992474.gif)
   
@@ -129,7 +129,7 @@ in `pubspec.yaml`, write this👇：
 
 ```yaml
 dependencies:
-  flutter_swiper : ^lastest_version
+  flutter_swiper_plus : 2.0.4
 ```
 
 then run this👇 in your project root：
