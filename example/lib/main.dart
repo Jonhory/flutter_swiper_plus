@@ -5,8 +5,6 @@ import 'src/ExampleTransformers.dart';
 import 'src/config.dart';
 import 'src/ExampleSwiperInScrollView.dart';
 
-import 'package:flutter/cupertino.dart';
-
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -28,18 +26,17 @@ class MyApp extends StatelessWidget {
         '/example04': (BuildContext context) => new ExampleCustomPagination(),
         '/example05': (BuildContext context) => new ExamplePhone(),
         '/example06': (BuildContext context) => new ScaffoldWidget(
-            child: new ExampleSwiperInScrollView(), title: "ScrollView"
-        ),
+            child: new ExampleSwiperInScrollView(), title: "ScrollView"),
         '/example07': (BuildContext context) => new ScaffoldWidget(
-            child: new ExampleCustom(),
-            title: "Custom All",
-        ),
+              child: new ExampleCustom(),
+              title: "Custom All",
+            ),
 
         // new demo
-        '/example08':(BuildContext context) => new ScaffoldWidget(
-            child: ExampleTransformers(),
-            title: "Transformers & layout",
-        ),
+        '/example08': (BuildContext context) => new ScaffoldWidget(
+              child: ExampleTransformers(),
+              title: "Transformers & layout",
+            ),
       },
     );
   }

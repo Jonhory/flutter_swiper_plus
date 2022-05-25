@@ -1,8 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
-
-import 'flutter_page_indicator/flutter_page_indicator.dart';
 
 class FractionPaginationBuilder extends SwiperPlugin {
   ///color ,if set null , will be Theme.of(context).scaffoldBackgroundColor
@@ -218,7 +215,9 @@ class DotSwiperPaginationBuilder extends SwiperPlugin {
 
     return new Wrap(
       key: key,
-      direction: config.scrollDirection == Axis.vertical ? Axis.vertical : Axis.horizontal,
+      direction: config.scrollDirection == Axis.vertical
+          ? Axis.vertical
+          : Axis.horizontal,
       runAlignment: WrapAlignment.center,
       crossAxisAlignment: WrapCrossAlignment.center,
       children: list,

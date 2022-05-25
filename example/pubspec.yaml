@@ -1,8 +1,10 @@
 name: example
 description: A new Flutter project.
 version: 2.0.0
+publish_to: none
+
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0-182.1.beta <3.0.0"
 dependencies:
   flutter:
     sdk: flutter
@@ -13,9 +15,9 @@ dependencies:
 
   flutter_swiper_plus:
     path: ../../flutter_swiper_plus
-#    git:
-#      url: 'https://github.com/mimajiushi/flutter_swiper_plus.git'
-#      ref: 'feature/flutter_swipter2.0'
+  #    git:
+  #      url: 'https://github.com/mimajiushi/flutter_swiper_plus.git'
+  #      ref: 'feature/flutter_swipter2.0'
 
   percent_indicator:
 
@@ -25,7 +27,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
 
   assets:
     - images/bg0.jpeg

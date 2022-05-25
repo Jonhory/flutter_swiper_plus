@@ -1,13 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:flutter_swiper_plus/src/transformer_page_view/buildin_transformers.dart';
-import 'package:flutter_swiper_plus/src/transformer_page_view/index_controller.dart';
 import 'package:flutter_swiper_plus/src/transformer_page_view/transformer_page_view.dart';
-
-import 'flutter_page_indicator/flutter_page_indicator.dart';
 
 part 'custom_layout.dart';
 
@@ -615,8 +611,10 @@ class _SwiperState extends _SwiperTimerMixin {
             config);
       } else {
         listForStack = _ensureListForStack(
-          // fixme 轮播图的点就是在widget.pagination!.build(context, config)构造的
-            swiper, listForStack, widget.pagination!.build(context, config));
+            // fixme 轮播图的点就是在widget.pagination!.build(context, config)构造的
+            swiper,
+            listForStack,
+            widget.pagination!.build(context, config));
       }
     }
 
@@ -625,7 +623,6 @@ class _SwiperState extends _SwiperTimerMixin {
         clipBehavior: Clip.none,
         children: listForStack,
       );
-      return Container();
     }
 
     return swiper;

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 import 'package:flutter_swiper_plus/src/transformer_page_view/buildin_transformers.dart';
 
 import '../view_util.dart';
@@ -118,49 +117,55 @@ class _ExampleState extends State<ExampleTransformers>
 
   @override
   Widget build(BuildContext context) {
-
     return new Container(
       color: Theme.of(context).primaryColorLight,
       child: CustomScrollView(
         slivers: <Widget>[
           SliverList(
               delegate: new SliverChildBuilderDelegate((c, i) {
-                return new Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
+            return new Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                /// transformer
+                // Default (not set transformer)
+                textWrap(
+                    text: "transformer: Default (not set transformer)",
+                    height: 30.0),
+                swiperWrap(),
 
-                    /// transformer
-                    // Default (not set transformer)
-                    textWrap(text: "transformer: Default (not set transformer)", height: 30.0),
-                    swiperWrap(),
+                // Default (not set transformer)
+                textWrap(
+                    text: "transformer: AccordionTransformer", height: 30.0),
+                swiperWrap(transformer: AccordionTransformer()),
 
-                    // Default (not set transformer)
-                    textWrap(text: "transformer: AccordionTransformer", height: 30.0),
-                    swiperWrap(transformer: AccordionTransformer()),
+                // ThreeDTransformer
+                textWrap(text: "transformer: ThreeDTransformer", height: 30.0),
+                swiperWrap(transformer: ThreeDTransformer()),
 
-                    // ThreeDTransformer
-                    textWrap(text: "transformer: ThreeDTransformer", height: 30.0),
-                    swiperWrap(transformer: ThreeDTransformer()),
+                // ZoomInPageTransformer
+                textWrap(
+                    text: "transformer: ZoomInPageTransformer", height: 30.0),
+                swiperWrap(transformer: ZoomInPageTransformer()),
 
-                    // ZoomInPageTransformer
-                    textWrap(text: "transformer: ZoomInPageTransformer", height: 30.0),
-                    swiperWrap(transformer: ZoomInPageTransformer()),
+                // ZoomOutPageTransformer
+                textWrap(
+                    text: "transformer: ZoomOutPageTransformer", height: 30.0),
+                swiperWrap(transformer: ZoomOutPageTransformer()),
 
-                    // ZoomOutPageTransformer
-                    textWrap(text: "transformer: ZoomOutPageTransformer", height: 30.0),
-                    swiperWrap(transformer: ZoomOutPageTransformer()),
+                // DepthPageTransformer
+                textWrap(
+                    text: "transformer: DepthPageTransformer", height: 30.0),
+                swiperWrap(transformer: DeepthPageTransformer()),
 
-                    // DepthPageTransformer
-                    textWrap(text: "transformer: DepthPageTransformer", height: 30.0),
-                    swiperWrap(transformer: DeepthPageTransformer()),
-
-                    // ScaleAndFadeTransformer
-                    textWrap(text: "transformer: ScaleAndFadeTransformer", height: 30.0),
-                    swiperWrap(transformer: ScaleAndFadeTransformer(fade: 0.3, scale: 0.1)),
-                  ],
-                );
-              }, childCount: 1)
-          )
+                // ScaleAndFadeTransformer
+                textWrap(
+                    text: "transformer: ScaleAndFadeTransformer", height: 30.0),
+                swiperWrap(
+                    transformer:
+                        ScaleAndFadeTransformer(fade: 0.3, scale: 0.1)),
+              ],
+            );
+          }, childCount: 1))
         ],
       ),
     );
